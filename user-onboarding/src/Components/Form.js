@@ -1,7 +1,7 @@
 import React from 'react'; 
 
 const Form = (props) => {
-    const { change, submit } = props;
+    const { change, submit, errors } = props;
     const {username, email, password, tos} = props.values;
 
     const onSubmit = (event) => {
@@ -16,6 +16,12 @@ const Form = (props) => {
     }
 
     return(
+    <div>
+        <h3>{errors.username}</h3>
+        <h3>{errors.password}</h3>
+        <h3>{errors.email}</h3>
+        <h3>{errors.tos}</h3>
+        
         <form onSubmit={onSubmit}>
             <label>Username: 
                 <input 
@@ -54,7 +60,7 @@ const Form = (props) => {
                     value='Submit your Character!'
                 />
         </form>
-        
+    </div>
             
                 
     
