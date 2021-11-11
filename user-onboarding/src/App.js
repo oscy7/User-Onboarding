@@ -7,7 +7,7 @@ const initialFormValues = {
   username: '', 
   password: '',
   email: '',
-  checked: false
+  tos: false
 }
 
 function App() {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Form = (props) => {
     const { change, submit } = props;
-    const {username, email, password, checked} = props.values;
+    const {username, email, password, tos} = props.values;
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -46,7 +46,7 @@ const Form = (props) => {
                     type='checkbox'
                     name='tos'
                     onChange={onChange}
-                    checked={checked}
+                    checked={tos}
                 />
             </label>
                 <input 
